@@ -11,32 +11,20 @@
  ];
 
  function checkSquaresForError() {
-     var square = []; //
+    var square = []; //
 
-     for (var k = 0; k <= 6; k += 3) {
-         for (var l = 0; l <= 6; l += 3) {
-             for (var i = 0 + l; i < l + 3; i++) {
-                 for (var j = k; j < k + 3; j++) {
-                     square.push(sudokuBoard[i][j]);
-                 }
-             }
-
-             square
-
-             if (checkArrayForDuplicates(square)) {
-                 console.error("Rules are broken in the " + i + "th row!");
-                 return true;
-             }
-
-             square = [];
-
-             square
-             // 1st square
-         }
-
-         return false;
-     }
- }
+    for (var squareRowIndex = 0; squareRowIndex <= 6; squareRowIndex += 3) {
+        for (var squareColIndex = 0; squareColIndex <= 6; squareColIndex += 3) {
+            for (var i = squareRowIndex; i < squareRowIndex + 3; i++) {
+                for (var j = squareColIndex; j < squareColIndex + 3; j++) {
+                    square.push(sudokuBoard[i][j]);
+                }
+            }
+            checkArrayForDuplicates(square)
+            square = []
+        }
+    }
+}
 
  function checkColsForErrors() {
      var column = []; //
