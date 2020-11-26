@@ -87,3 +87,26 @@ function toTitleCase3(sentence) {
 console.log(toTitleCase("The qUick brOWN fox jumPS OVer the LAZY dog"));
 console.log(toTitleCase2("The qUick brOWN fox jumPS OVer the LAZY dog"));
 console.log(toTitleCase3("The qUick brOWN fox jumPS OVer the LAZY dog"));
+
+
+// Exercise 4
+// Check if a number is perfect, the sum of it's divisors is equal to the number itself
+
+function isNumberPerfect(number) {
+    let sumOfDivisors
+
+    for(var potentialDivisor = 0; potentialDivisor < number; potentialDivisor++) {
+
+        if (number % potentialDivisor == 0) {
+            sumOfDivisors += potentialDivisor;
+        }
+
+        if (sumOfDivisors == number && sumOfDivisors + number == 2 * number) {
+            return true;
+        }
+
+    }
+
+    return false;
+
+}
