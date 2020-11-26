@@ -93,10 +93,9 @@ console.log(toTitleCase3("The qUick brOWN fox jumPS OVer the LAZY dog"));
 // Check if a number is perfect, the sum of it's divisors is equal to the number itself
 
 function isNumberPerfect(number) {
-    let sumOfDivisors
+    let sumOfDivisors = 0
 
-    for(var potentialDivisor = 0; potentialDivisor < number; potentialDivisor++) {
-
+    for(var potentialDivisor = 1; potentialDivisor < number; potentialDivisor++) {
         if (number % potentialDivisor == 0) {
             sumOfDivisors += potentialDivisor;
         }
@@ -104,9 +103,9 @@ function isNumberPerfect(number) {
         if (sumOfDivisors == number && sumOfDivisors + number == 2 * number) {
             return true;
         }
-
     }
 
     return false;
-
 }
+
+console.log(isNumberPerfect(6));
