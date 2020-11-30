@@ -1,0 +1,23 @@
+{
+  "name": "testing-exercise",
+  "version": "1.0.0",
+  "description": "Testing Exercise CM FT",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enisinanaj/2-git-client-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enisinanaj/2-git-client-exercise/issues"
+  },
+  "homepage": "https://github.com/enisinanaj/2-git-client-exercise#readme"
+}
