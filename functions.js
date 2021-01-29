@@ -18,6 +18,9 @@ console.log(tellFortune2({
     numberOfChildren: 2
 }));
 
+function getOne() {
+    return 1;
+}
 
 // Exercise 2
 // Create 2 functions that calculate properties of a circle
@@ -62,7 +65,11 @@ function toTitleCase2(sentence) {
                     : char
                 );
         }, " ");
+
+        // toTitleCase2
 }
+
+var i = () => 42;
 
 function toTitleCase3(sentence) {
 
@@ -109,3 +116,6 @@ function isNumberPerfect(number) {
 }
 
 console.log(isNumberPerfect(6));
+
+//hello!
+console.log(toTitleCase3("The qUick brOWN fox jumPS OVer the LAZY dog"));
