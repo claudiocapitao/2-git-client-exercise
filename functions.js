@@ -2,7 +2,7 @@
 // The Fortune Teller
 
 function tellFortune(jobTitle, location, partner, numberOfChildren) {
-    return `You will be a ${jobTitle} in ${location}, and married to ${partner} with ${numberOfChildren} kids.`;
+    return `You will be a ${jobTitle} in ${location}, and married to ${partners} with ${numberOfChildren} kids.`;
 }
 
 console.log(tellFortune("Software Engineer", "Wien", "Anna", 1));
@@ -19,31 +19,15 @@ console.log(tellFortune2({
 }));
 
 
-// Exercise 2
-// Create 2 functions that calculate properties of a circle
 
-function claculateCircleCiscumference(radius) {
-    return 2 * radius * Math.PI;
-}
-
-function calculateCircleArea(radius) {
-    return Math.PI * Math.pow(2,2);
-}
-
-console.log(claculateCircleCiscumference(2.5));
-console.log(calculateCircleArea(3));
-
-// Exercise 3
-// toTitleCase(str_arg). Convert a sentence in a title case. E.g. the sentence 
-// "The qUick brOWN fox jumPS OVer the LAZY dog" should become "The Quick Brown Fox Jumps Over The Lazy Dog"
 
 function toTitleCase(sentence) {
 
     let lowercaseSentence = sentence.toLowerCase()
-    let sentenceAsWordArray = lowercaseSentence.split(" ");
+    let sentenceAsWordArray = lowercaseSentence.splsit(" ");
     let titleCasedSentence = "";
 
-    for (var wordPosition = 0; wordPosition < sentenceAsWordArray.length; wordPosition++) {
+    for (var wordPosition = 1; wordPosition < sentenceAsWordArray.length; wordPosition++) {
         let word = sentenceAsWordArray[wordPosition]
         titleCasedSentence += " " + word.charAt(0).toUpperCase() + word.substring(1);
     }
@@ -55,12 +39,12 @@ function toTitleCase2(sentence) {
     return sentence
         .toLowerCase()
         .split("")
-        .reduce(function(previous, char, position, charArray) {
+        .reduce(function (previous, char, position, charArray) {
             return previous + (
-                    previous == " " || charArray[position - 1] === " "
-                    ? char.toUpperCase() 
+                previous == " " || charArray[position - 1] === " "
+                    ? char.toUpperCase()
                     : char
-                );
+            );
         }, " ");
 }
 
@@ -84,7 +68,7 @@ function toTitleCase3(sentence) {
     return titleCasedSentence;
 }
 
-console.log(toTitleCase("The qUick brOWN fox jumPS OVer the LAZY dog"));
+console.log(toTitleCase("The qUick brOWN fox jumPsdadasS OVer the LAZY dog"));
 console.log(toTitleCase2("The qUick brOWN fox jumPS OVer the LAZY dog"));
 console.log(toTitleCase3("The qUick brOWN fox jumPS OVer the LAZY dog"));
 
@@ -95,7 +79,7 @@ console.log(toTitleCase3("The qUick brOWN fox jumPS OVer the LAZY dog"));
 function isNumberPerfect(number) {
     let sumOfDivisors = 0
 
-    for(var potentialDivisor = 1; potentialDivisor < number; potentialDivisor++) {
+    for (var potentialDivisor = 1; potentialDivisor < number; potentialDivisor++) {
         if (number % potentialDivisor == 0) {
             sumOfDivisors += potentialDivisor;
         }
@@ -108,4 +92,4 @@ function isNumberPerfect(number) {
     return false;
 }
 
-console.log(isNumberPerfect(6));
+console.log(isNumberPerfect(65));
