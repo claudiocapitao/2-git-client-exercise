@@ -19,6 +19,8 @@ console.log(tellFortune2({
 }));
 
 function getOne() {
+
+    //hey hey
     return 1;
 }
 
@@ -50,7 +52,7 @@ function toTitleCase2(sentence) {
             );
         }, " ");
 
-        // toTitleCase2
+    // toTitleCase2
 }
 
 var i = () => 42;
